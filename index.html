@@ -1,85 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ΒΙΟΓΡΑΦΙΚΟ</title>
+    <title>Βιογραφικό Σημείωμα</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
             margin: 0;
-            font-family: Arial, sans-serif;
-            min-height: 100vh;
-            background-color: #f7f7f7;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
         }
-
         .container {
-            background-color: #fff;
-            padding: 40px;
+            width: 80%;
+            max-width: 1000px;
+            background: #333;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            max-width: 80%;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-
-        h1 {
-            color: #333;
-            font-size: 2.5em;
+        .header, .section {
+            margin-bottom: 20px;
+        }
+        .header {
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .intro {
+            background-color: #444;
+            padding: 20px;
+            padding-bottom: 10px;
+            border-radius: 10px;
             margin-bottom: 20px;
             text-align: center;
         }
-
-        p {
-            color: #555;
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 15px;
+        .intro h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
         }
-
-        img {
-            display: block;
-            margin: 0 auto 20px;
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #333;
+        .card {
+            background-color: #444;
+            padding: 20px;
+            padding-bottom: 10px;
             border-radius: 10px;
-            float: left;
+            margin-bottom: 20px;
         }
-
-        h3 {
-            color: #333;
-            font-size: 1.8em;
+        .card h3 {
+            margin-top: 0;
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card ul li {
             margin-bottom: 10px;
-            
         }
-
-        hr {
-            border: none;
-            border-top: 1px solid #ccc;
-            margin: 30px auto;
-            width: 50%;
+        .games-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-
+        .games-list li {
+            background: #555;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1 1 calc(50% - 10px);
+            text-align: left;
+        }
+        .games-list li::before {
+            counter-increment: game-counter;
+            content: counter(game-counter) ". ";
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Curriculum vitae</h1>
-        <p><strong>Information:</strong><br>First Name: Evangelos<br>Last name: Konstantinidis<br>Studies: Department of Informatics ,Ionian University</p>
-        <p><strong>Knowledge:</strong><br>Programming languages: C, C++, Python, Java, και JavaScript<br>Web development: HTML, CSS, PHP</p>
-        <p><strong>Previous Projects:</strong><br>1. Creation of an application showcasing the menu of the Ionian Uni Restaurant..<br>2.Development of a MySQL database for the requirements of an airport.<br>3. Development of a hotel reservation application.</p>
-        <p><strong>Work Experience</strong><br>Years of Service: 3 years at a Hotel in Thassos.</p>
-        
-        <p><strong>About Me:</strong></p>
-        <p>From a young age, traveling has been one of the greatest sources of inspiration for me. Discovering new places, cultures, and people fills me with joy and a sense of adventure. Another passion of mine is video games. Since my childhood, I entered the world of gaming and found a way to escape from everyday life and explore fantastical worlds.</p>
+        <div class="header">
+            <h1>Ευάγγελος Κωνσταντινίδης</h1>
+            <p>Προγραμματιστής / Φοιτητής Πληροφορικής</p>
+            <p>Τηλέφωνο: 6944454222 | Email: inf2021113@ionio.gr</p>
+        </div>
 
-        <hr>
+        <div class="intro">
+            <h2>Discover my Amazing Tech Space!</h2>
+            <p>I build software solutions for various applications.</p>
+        </div>
 
-        <!-- New section with your picture -->
-        <div>
-            <p><strong>My photo from a trip to Iceland.</strong></p>
-            <img src="20220704_103740.jpg" height="220" width="300" alt="Η φωτογραφία μου από την Ισλανδία" title="Από την Ισλανδία">
+        <div class="card">
+            <h3>Δεξιότητες</h3>
+            <ul>
+                <li>Python, Java, C#, C++</li>
+                <li>.NET Windows Form Framework</li>
+                <li>HTML, CSS, JavaScript, SQL</li>
+                <li>Git, Visual Studio Code, Visual Studio</li>
+                <li>Αγγλικά (Άριστα)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Γνώση σε Video Games</h3>
+            <p>Είμαι ενθουσιώδης gamer με εξαιρετική γνώση σε διάφορα video games.</p>
+            <p>Έφτασα στους Top 20 in Risk Global Domination.</p>
+            <p>Παιχνίδια που παίζω:</p>
+            <ul class="games-list">
+                <li>Player Unknown's Battlegrounds</li>
+                <li>Risk</li>
+                <li>World of Warships</li>
+                <li>Left 4 Dead</li>
+                <li>X-Plane</li>
+                <li>Portal</li>
+                <li>Rocket League</li>
+                <li>FIFA</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Επαγγελματική Εμπειρία</h3>
+            <p><strong>Πρακτική Άσκηση</strong></p>
+            <p>Ρόλος: Junior Developer</p>
+            <ul class="games-list">
+                <li>Συμμετοχή στην ανάπτυξη και συντήρηση εφαρμογών.</li>
+                <li>Συνεργασία με την ομάδα ανάπτυξης για την υλοποίηση νέων λειτουργιών.</li>
+                <li>Δοκιμή και διόρθωση σφαλμάτων στον κώδικα.</li>
+            </ul>
+            <p><strong>AGI Power Hub</strong></p>
+            <p>Ρόλος: Developer</p>
+            <ul class="games-list">
+                <li>Ανάπτυξη λογισμικού για φόρτιση ηλεκτρικών αυτοκινήτων.</li>
+                <li>Σχεδιασμός και υλοποίηση νέων χαρακτηριστικών και βελτιώσεων.</li>
+                <li>Επίλυση προβλημάτων και τεχνική υποστήριξη.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Εκπαίδευση</h3>
+            <p><strong>Ιόνιο Πανεπιστήμιο</strong></p>
+            <p>Πτυχίο Πληροφορικής (Υπό Αποφοίτηση)</p>
+            <p>Διάρκεια Σπουδών: 2021 - 2025</p>
+        </div>
+
+        <div class="card">
+            <h3>Προσωπικά Χαρακτηριστικά</h3>
+            <p>Είμαι πάντα στην ώρα μου και άτομο εμπιστοσύνης. Διακρίνομαι για την αξιοπιστία μου και την προθυμία μου να βοηθήσω την ομάδα μου.</p>
+        </div>
+
+        <div class="card">
+            <h3>Ενδιαφέροντα</h3>
+            <ul>
+                <li>Video Games: Ενεργός παίκτης σε διάφορες πλατφόρμες και είδη παιχνιδιών.</li>
+                <li>Προγραμματισμός: Συμμετοχή σε ανοιχτού κώδικα projects και hackathons.</li>
+            </ul>
         </div>
     </div>
 </body>
